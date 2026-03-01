@@ -1,0 +1,236 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>my-portfolio-2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+  :root {
+    --primary-color: #4f46e5;
+    --accent-color: #6366f1;
+    --bg-color: #f9fafb;
+    --text-color: #1f2937;
+    --text-light: #6b7280;
+    --border-radius: 12px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgb(79 70 229 / 0.3);
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2.25rem;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+  nav {
+    margin-top: 0.5rem;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: var(--accent-color);
+    outline: none;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  p.lead {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--text-light);
+  }
+  .about {
+    font-size: 1.1rem;
+    color: var(--text-light);
+  }
+  .skills-list, .projects-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .skills-list li {
+    background: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    color: white;
+    font-weight: 600;
+    user-select: none;
+  }
+  .project-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    padding: 1rem 1.5rem;
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project-card:hover,
+  .project-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
+    outline: none;
+  }
+  .project-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+  }
+  .project-description {
+    flex-grow: 1;
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .project-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-right: 1rem;
+    transition: color 0.2s ease;
+  }
+  .project-links a:hover,
+  .project-links a:focus {
+    text-decoration: underline;
+    color: var(--accent-color);
+    outline: none;
+  }
+  footer {
+    background: var(--primary-color);
+    text-align: center;
+    padding: 1rem 1rem;
+    color: white;
+    font-weight: 600;
+    user-select: none;
+  }
+  @media (max-width: 600px) {
+    nav a {
+      margin: 0 0.5rem;
+      font-size: 0.9rem;
+    }
+    .project-card {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>my-portfolio-2</h1>
+  <nav aria-label="Primary navigation">
+    <a href="#about" tabindex="0">About</a>
+    <a href="#skills" tabindex="0">Skills</a>
+    <a href="#projects" tabindex="0">Projects</a>
+    <a href="#contact" tabindex="0">Contact</a>
+  </nav>
+</header>
+<main>
+  <section id="about" tabindex="0">
+    <h2>About Me</h2>
+    <p class="about">
+      Hello! I'm a passionate web developer with a knack for crafting beautiful and functional websites.
+      I specialize in modern JavaScript frameworks and enjoy turning ideas into pixel-perfect realities.
+    </p>
+  </section>
+  <section id="skills" tabindex="0">
+    <h2>Skills</h2>
+    <ul class="skills-list" aria-label="List of technical skills">
+      <li>HTML5</li>
+      <li>CSS3 &amp; SASS</li>
+      <li>JavaScript (ES6+)</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>Git &amp; GitHub</li>
+      <li>Responsive Design</li>
+      <li>REST APIs</li>
+    </ul>
+  </section>
+  <section id="projects" tabindex="0">
+    <h2>Projects</h2>
+    <ul class="projects-list" aria-label="List of projects">
+      <li class="project-card" tabindex="0">
+        <h3 class="project-title">Portfolio Website</h3>
+        <p class="project-description">A personal portfolio website to showcase my projects and skills, fully responsive and accessible.</p>
+        <div class="project-links">
+          <a href="https://github.com/example/portfolio-website" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Portfolio Website">GitHub</a>
+          <a href="https://example.com/portfolio-website" target="_blank" rel="noopener noreferrer" aria-label="Live demo of Portfolio Website">Live Demo</a>
+        </div>
+      </li>
+      <li class="project-card" tabindex="0">
+        <h3 class="project-title">Task Manager App</h3>
+        <p class="project-description">A sleek task management app built with React and Node.js featuring user authentication and RESTful APIs.</p>
+        <div class="project-links">
+          <a href="https://github.com/example/task-manager" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Task Manager App">GitHub</a>
+          <a href="https://example.com/task-manager" target="_blank" rel="noopener noreferrer" aria-label="Live demo of Task Manager App">Live Demo</a>
+        </div>
+      </li>
+      <li class="project-card" tabindex="0">
+        <h3 class="project-title">Weather Dashboard</h3>
+        <p class="project-description">An interactive weather dashboard using open APIs to display forecasts based on user location.</p>
+        <div class="project-links">
+          <a href="https://github.com/example/weather-dashboard" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Weather Dashboard">GitHub</a>
+          <a href="https://example.com/weather-dashboard" target="_blank" rel="noopener noreferrer" aria-label="Live demo of Weather Dashboard">Live Demo</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section id="contact" tabindex="0">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, feel free to send me an email or connect with me on social media.</p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:hello@my-portfolio-2.com" aria-label="Send email to hello@my-portfolio-2.com">hello@my-portfolio-2.com</a>
+    </p>
+    <p>
+      <strong>Social:</strong> 
+      <a href="https://github.com/my-portfolio-2" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a> | 
+      <a href="https://linkedin.com/in/my-portfolio-2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a> | 
+      <a href="https://twitter.com/my-portfolio-2" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile">Twitter</a>
+    </p>
+  </section>
+</main>
+<footer>
+  &copy; 2024 my-portfolio-2. All rights reserved.
+</footer>
+</body>
+</html>
+```
